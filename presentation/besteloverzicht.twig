@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/index.css">        
+        <link rel="stylesheet" type="text/css" href="css/besteloverzicht.css">        
+        <title>Pizzashop - Besteloverzicht</title>
+    </head>
+    <body>
+        {% include 'header.twig' %}
+        <div class="bestellingok">
+            Proficiat, {{bestelling.gebruiker.naam}} {{bestelling.gebruiker.voornaam}}, je hebt zonet bij ons besteld.<br>
+        </div>
+        <div class="besteloverzicht">
+            Hieronder kan u een overzicht vinden van de bestelling van zonet.<br>
+            <br>
+            Uw bestelling van {{bestelling.tijdstip | date("d/m/Y H:i:s")}}<br>
+            {% for pizza in pizzalijst %}
+                {{pizza.aantal}} x {{pizza.pizza.pizzanaam}}<br>
+            {% endfor %}
+            Het bedrag te betalen is: &euro; {{bestelling.totaal | number_format(2,',','.')}}<br>
+            <br>
+            Uw bestelling wordt geleverd op het volgende adres:<br>
+            {{bestelling.gebruiker.straat}} {{bestelling.gebruiker.huisnummer}} {{bestelling.gebruiker.busnummer}}<br>
+            {{bestelling.gebruiker.plaats.postcode}} {{bestelling.gebruiker.plaats.plaatsnaam}}<br>
+            {{bestelling.gebruiker.tel}}<br>
+            {% if bestelling.extrainfo != "" %}
+                Uw extra informatie voor ons:<br>
+                {{bestelling.extrainfo}}<br>
+            {% endif %}
+            <br>
+            Onze koerier zal zo snel mogelijk de bestelling leveren.<br>
+            Alvast bedankt voor het vertrouwen.<br>
+        </div>
+        <a href="index.php">Home</a>
+    </body>
+</html>

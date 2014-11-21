@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.header {
+    border: 1px black solid;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.titel {
+    font-family: Helvetica, Verdana, sans-serif;
+    font-size: 3em;
+    color: gold;
+    margin: 0;
+}
+
+.titel img{
+    vertical-align: middle;
+}
+
+.pizza{
+    border: 1px lightgrey solid;
+    float: left;
+    width: 40%;
+    height: 7em;
+    padding: 1em;
+    background-color: #F0F0F0;
+}
+
+.promoprijs {
+    text-decoration: line-through;
+}
+
+.geenpromoprijs{
+    float: left;
+}
+
+input[type="number"] {
+   width: 3em;
+}
+
+.overzicht{
+    width: 50%;
+    margin: 0;
+    float: left;
+    display: inline;
+}
+
+.winkelmand {
+    width: 45%;
+    display: inline-block;
+}
+
+.pizzanaam {
+    width: 8em;
+}
+
+.aantal, .prijs, .totprijs{
+    text-align: center;
+}
+
+body{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.gebruiker {
+    width: 100%;
+}
+
+.error {
+    color: red;
+}

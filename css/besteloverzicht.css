@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.bestellingok{
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.besteloverzicht {
+    width: 80%;
+}

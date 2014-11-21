@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/index.css">        
+        <title>Pizzashop</title>
+    </head>
+    <body>
+        {% include 'header.twig' %}
+        <div class="gebruiker">
+            {% if gebruiker.naam is defined %}
+                {{gebruiker.naam}} {{gebruiker.voornaam}} - <a href="index.php?actie=loguit">Uitloggen</a>
+            {% endif %}
+        </div>
+        {% include 'overzicht.twig' %}
+        {% include 'winkelmand.twig' %}
+    </body>
+</html>

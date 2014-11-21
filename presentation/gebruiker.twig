@@ -1,0 +1,19 @@
+        <h1>
+            Levering gegevens
+        </h1>
+        <div>
+            Naam: {{gebruiker.Naam}}<br>
+            Voornaam: {{gebruiker.Voornaam}}<br>
+            Straat: {{gebruiker.straat}}<br>
+            Huisnummer: {{gebruiker.huisnummer}}<br>
+            Busnummer: {{gebruiker.busnummer}}<br>
+            Postcode: {{gebruiker.plaats.postcode}}<br>
+            Gemeente: {{gebruiker.plaats.plaatsnaam}}<br>
+            {% if gebruiker.plaats.leverplaats == 0 %}
+                <div class="error">{{error}}</div><br>
+            {% endif %}
+            Tel/GSM: {{gebruiker.tel}}<br>
+            <form action="index.php?actie=klantaanpassen" method="POST">
+                <input type="submit" name="klantaanpassen" value="Aanpassen">
+            </form>
+        </div>

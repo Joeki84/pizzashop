@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.inloggen {
+    width: 45%;
+    height: 7.5em;
+    float: left;
+    padding: 1em;
+    margin-top: 0.25em;
+    border: 1px black solid;
+}
+
+.links{
+    margin-left: 0;
+    margin-right: 0.75em;
+}
+
+.rechts{
+    margin-right: 0;
+    margin-left: 0.75em;
+}
